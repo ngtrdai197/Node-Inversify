@@ -1,0 +1,7 @@
+export enum ErrorCode {
+  NOT_FOUND = 404,
+  BAD_REQUEST = 400,
+  UNAUTHENTICATED = 401,
+  UNAUTHORIZED = 403,
+  SERVER_INTERNAL = 500,
+}
