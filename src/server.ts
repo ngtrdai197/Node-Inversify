@@ -1,4 +1,5 @@
 import "reflect-metadata";
+
 import * as express from "express";
 
 import { inversifyExpressServer } from "./bootstrap";

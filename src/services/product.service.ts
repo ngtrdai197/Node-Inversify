@@ -24,4 +24,13 @@ export class ProductService {
       throw handleError("", ErrorCode.SERVER_INTERNAL);
     }
   }
+
+  async getProductById(productId: string): Promise<IProduct> {
+    try {
+      return this.productRepository.findById(productId)
+    } catch (error) {
+      console.log('error', error)
+      throw handleError("", ErrorCode.SERVER_INTERNAL)
+    }
+  }
 }

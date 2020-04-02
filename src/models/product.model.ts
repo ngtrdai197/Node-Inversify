@@ -1,6 +1,7 @@
 import { Schema, model } from "mongoose";
 
 import { IProduct } from "../interfaces/product.interface";
+import { PRODUCT_MODEL } from "../common/mongoose.constant";
 
 const ProductSchema = new Schema({
   name: {
@@ -10,5 +11,14 @@ const ProductSchema = new Schema({
   price: Number
 });
 
-export const productModel = model<IProduct>('Product', ProductSchema, 'Product')
+export const productModel = model<IProduct>(
+  PRODUCT_MODEL,
+  ProductSchema,
+  PRODUCT_MODEL
+);
 
+/** 
+ * TODO: research and implement mongoose delete 
+ * 
+ * https://www.npmjs.com/package/mongoose-delete
+ */
